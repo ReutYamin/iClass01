@@ -1,19 +1,174 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS, JS Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-  </head>
-  <body>
-   
-    <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000;"></canvas>
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
 
-    
-    <script src="script.js" async defer></script>
-  </body>
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .exercise {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fefefe;
+        }
+
+        .exercise p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            font-family: monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #666;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interactive HTML, CSS, JS Exercises</h1>
+    </header>
+
+    <main>
+        <div class="exercise">
+            <p>1. Create a simple HTML page that displays "Hello, World!"</p>
+            <textarea id="html1"></textarea>
+            <button onclick="runCode('html1', 'output1')">Run Code</button>
+            <iframe id="output1"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>2. Create a button that changes the background color of the page when clicked.</p>
+            <textarea id="html2"></textarea>
+            <button onclick="runCode('html2', 'output2')">Run Code</button>
+            <iframe id="output2"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>3. Create an input field where users can type their name, and display "Hello, [name]!" below it when they click a button.</p>
+            <textarea id="html3"></textarea>
+            <button onclick="runCode('html3', 'output3')">Run Code</button>
+            <iframe id="output3"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>4. Create a list with three items and add a button that adds a new item to the list when clicked.</p>
+            <textarea id="html4"></textarea>
+            <button onclick="runCode('html4', 'output4')">Run Code</button>
+            <iframe id="output4"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>5. Create a styled box with CSS that changes its size when hovered over.</p>
+            <textarea id="html5"></textarea>
+            <button onclick="runCode('html5', 'output5')">Run Code</button>
+            <iframe id="output5"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>6. Write a function in JavaScript that calculates the factorial of a number entered by the user in an input field.</p>
+            <textarea id="html6"></textarea>
+            <button onclick="runCode('html6', 'output6')">Run Code</button>
+            <iframe id="output6"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>7. Create a counter that increments and decrements when you click "+" or "-" buttons.</p>
+            <textarea id="html7"></textarea>
+            <button onclick="runCode('html7', 'output7')">Run Code</button>
+            <iframe id="output7"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>8. Create a dropdown menu with three options, and display the selected option in a paragraph below.</p>
+            <textarea id="html8"></textarea>
+            <button onclick="runCode('html8', 'output8')">Run Code</button>
+            <iframe id="output8"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>9. Create a form with validation that checks if an email address is entered correctly before submission.</p>
+            <textarea id="html9"></textarea>
+            <button onclick="runCode('html9', 'output9')">Run Code</button>
+            <iframe id="output9"></iframe>
+        </div>
+
+        <div class="exercise">
+            <p>10. Create a simple calculator with buttons for addition, subtraction, multiplication, and division.</p>
+            <textarea id="html10"></textarea>
+            <button onclick="runCode('html10', 'output10')">Run Code</button>
+            <iframe id="output10"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Interactive Exercises | Built with 💡 and 💻
+    </footer>
+
+    <script>
+        function runCode(inputId, outputId) {
+            const code = document.getElementById(inputId).value;
+            document.getElementById(outputId).srcdoc = code;
+        }
+    </script>
+</body>
 </html>
